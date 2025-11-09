@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信城市群聊与红娘牵线服务</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>微信城市群聊与红娘牵线服务</h1>
+            <p>加入您所在城市的专属微信群，认识更多同城朋友</p>
+        </header>
+
+        <main>
+            <section class="service-info">
+                <h2>服务介绍</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <h3>城市群聊</h3>
+                        <p>加入您所在城市的微信群，与同城朋友交流互动</p>
+                        <span class="price">¥39.99/永久</span>
+                    </div>
+                    <div class="card">
+                        <h3>红娘牵线</h3>
+                        <p>专业红娘为您牵线搭桥，助您找到心仪对象</p>
+                        <span class="price">¥39.99/次</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="city-selection">
+                <h2>选择您的城市</h2>
+                <div class="city-tags">
+                    <button class="city-tag" onclick="selectCity('北京')">北京</button>
+                    <button class="city-tag" onclick="selectCity('上海')">上海</button>
+                    <button class="city-tag" onclick="selectCity('广州')">广州</button>
+                    <button class="city-tag" onclick="selectCity('深圳')">深圳</button>
+                    <button class="city-tag" onclick="selectCity('杭州')">杭州</button>
+                    <button class="city-tag" onclick="selectCity('成都')">成都</button>
+                    <button class="city-tag" onclick="selectCity('武汉')">武汉</button>
+                    <button class="city-tag" onclick="selectCity('西安')">西安</button>
+                    <button class="city-tag" onclick="selectCity('南京')">南京</button>
+                    <button class="city-tag" onclick="selectCity('重庆')">重庆</button>
+                    <button class="city-tag" onclick="selectCity('苏州')">苏州</button>
+                    <button class="city-tag" onclick="selectCity('天津')">天津</button>
+                    <button class="city-tag" onclick="selectCity('长沙')">长沙</button>
+                    <button class="city-tag" onclick="selectCity('郑州')">郑州</button>
+                    <button class="city-tag" onclick="selectCity('东莞')">东莞</button>
+                    <button class="city-tag" onclick="selectCity('青岛')">青岛</button>
+                    <button class="city-tag" onclick="selectCity('沈阳')">沈阳</button>
+                    <button class="city-tag" onclick="selectCity('宁波')">宁波</button>
+                </div>
+                <div class="custom-city">
+                    <input type="text" id="customCityInput" placeholder="输入您的城市名称">
+                    <button onclick="customCitySelect()">确定</button>
+                </div>
+            </section>
+
+            <section class="service-options">
+                <h2>选择服务类型</h2>
+                <div class="option-group">
+                    <label>
+                        <input type="radio" name="serviceType" value="group" checked>
+                        <span>城市群聊服务</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="matchmaking">
+                        <span>红娘牵线服务</span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="payment-section">
+                <h2>支付信息</h2>
+                <div class="payment-info">
+                    <p>服务费用：<span id="paymentAmount">¥39.99</span></p>
+                    <p>您选择的地区：<span id="selectedLocation">未选择</span></p>
+                </div>
+                <button id="payButton" onclick="processPayment()">立即支付</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 微信城市群聊服务平台 版权所有</p>
+            <p>客服微信：service123</p>
+        </footer>
+    </div>
+
+    <script src="cities.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
